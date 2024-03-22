@@ -1,3 +1,6 @@
+
+//  ELEMENTS
+
 var image = document.querySelector(".containerImage");
 var status = document.querySelector(".status");
 var name = document.querySelector(".name");

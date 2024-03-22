@@ -1,0 +1,90 @@
+HTML--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Here's a description of the functionality of the provided HTML code:
+
+### Header (`<head>`):
+- `<meta>`: Defines the character set and viewport width for mobile display.
+- `<meta name="description">`: Provides a brief description of the website.
+- `<title>`: Specifies the title of the page displayed in the browser bar.
+- `<link rel="stylesheet">`: Links the CSS file `style.css` to the HTML page.
+- `<link>`: Links external fonts from Google Fonts and OnlineWebFonts.com used in the site.
+
+### Document Body (`<body>`):
+- **Header (`<header>`)**:
+  - Contains the site logo and brand name (`<a>`).
+  - Contains the navigation bar (`<nav>`).
+
+- **Main Section (`<main>`)**:
+  - **Selection Buttons (`<div class="ButtonSection">`)**:
+    - Displays buttons to filter cards based on status (all, alive, dead, unknown).
+    - Shows an animated image of Rick's portal gun (`<img>`).
+  - **Main Content (`<div class="content">`)**:
+    - Contains two sections (`<div class="Section1">` and `<aside class="Section2">`) displaying information about "Rick and Morty".
+  - **Modal Section (`<div id="modale">`)**:
+    - Displays additional information when a card is clicked.
+  - **Card Selection (`<div class="CardSelector">`)**:
+    - Contains a series of cards, each with an image and information about the character's status, name, race, and gender.
+
+### Footer (`<footer>`):
+- There is no footer in this website.
+
+### Script (`<script src="app.js">`):
+- Links the JavaScript file `app.js` for handling site interactivity.
+
+This HTML code forms the basic structure for a website that displays information about "Rick and Morty" and allows users to filter and view character cards. The linked CSS and JavaScript implement the site's style and interactivity.
+
+
+CSS ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Reset CSS
+This section contains a set of rules that reset margins, padding, and box-sizing for all elements on the page to zero, ensuring a consistent base style.
+Body
+Sets the background of the page body to a dark blue color (#24325F), defines a minimum height of 100% of the viewport, and specifies the font-family used for text.
+Header
+The code above defines the style of the page header. The header is positioned at the top and fixed to the top of the browser window. It has a dark background color (#111D45), a height of 80 pixels, and contains the logo and navigation bar.
+Navigation Links
+This block of code defines the style of links in the navigation bar. Links have a bright green color (#B2DF28), bold font weight, and a hover animation that changes the background color and text color.
+Logo
+This part defines the style of the logo. The logo is positioned absolutely within the header, with specified height and width. The logo is designed to overlap the header.
+Audio Element
+This piece of code defines the style for an audio element added to the page. It sets the left and top margin of the audio element.
+Main Section
+This section defines the style of the main section of the page. The main section contains the main content of the page.
+Button Section
+This block of code defines the style of a section containing buttons. The buttons are positioned side by side and have uniform spacing between them.
+Portal Pistol Image
+This part defines the style of an image of a "Portal Pistol". The image is specifically positioned and has defined height, width, and margins.
+Buttons
+This section defines the style of buttons present on the page. Buttons have a three-dimensional appearance with a transparent background and a bright green border. They change color and size on hover.
+Article Title
+This part defines the style for article titles. Titles are large and have a slight shadow to create a three-dimensional effect.
+Main Content
+This section defines the style of the main content of the page. Text has uniform spacing around it and a particular font.
+Section 1
+This part defines the style of the first section of the page. The section has a transparent background with a clip-path shape and negative padding.
+Section 2
+This block of code defines the style of the second section of the page. The section has a similar appearance to the first but with a different clip-path shape.
+Rick Portal Image
+This part defines the style of an image of the "Rick Portal". The image is sized and positioned specifically.
+Section 3
+This block of code defines the style of the third section of the page. The section has defined height and width.
+
+
+
+JAVASCRIPT -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Variable Declarations:
+image, status, name, race, gender, card, buttons, content, CardSelector, Section3H1: These variables store references to various elements in the HTML document using document.querySelector() or document.querySelectorAll().
+Button Click Event Listeners:
+This block of code adds event listeners to all buttons with the class .Buttons. When a button is clicked, it triggers a function that adds fade-in and fade-out animations to certain elements, fetches character data based on the button's data attribute, and calls the CharCard() function to display character cards.
+Asynchronous Functions:
+getCharactersByStatus(status): This function fetches character data from the Rick and Morty API based on the character's status (alive, dead, or unknown).
+getAllCharacters(): This function fetches all character data from the Rick and Morty API by iterating through all pages of the API's paginated response.
+CharCard() Function:
+This function populates the character cards with data retrieved from the API. It randomly selects a character from the fetched data, sets the background image of the card, and displays the character's status, name, race, and gender. It also adds a click event listener to each card that triggers the showModale() function when clicked.
+showCards() Function:
+This function displays all character cards on the page and hides other elements like headings and buttons associated with the card section.
+showModale(character) Function:
+This function displays a modal containing detailed information about a character when a card is clicked. It sets the character's location, episode, and image in the modal. If the character has multiple episodes, it only displays the first episode.
+closeModale() Function:
+This function closes the modal by hiding it and clearing any text content that might have been previously set.
