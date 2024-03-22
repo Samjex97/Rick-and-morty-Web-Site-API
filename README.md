@@ -47,9 +47,9 @@ The "Rick and Morty Explorer" project serves as a demonstration of the skills ac
 * [Html]()
 * [JavaScript]()
 * [Css]()
-* [figma]()
-
-### Creating A Pull Request
+* [figma]()    
+* [Docker]()
+* [Netlify]()  
 
 
 
@@ -59,6 +59,6 @@ The "Rick and Morty Explorer" project serves as a demonstration of the skills ac
 
 ## Acknowledgements
 
-* [Ousama ](https://github.com/Samjex97/Rick-and-morty-Web-Site-API)
-* []()
-* []()
+* [OusamaGITHUB ](https://github.com/Samjex97/Rick-and-morty-Web-Site-API)
+* [OusamaFIGMA](https://www.figma.com/file/n48EMEgPWCcIg2F54mKe6X/Untitled?type=design&node-id=2-2&mode=design&t=7eL4hagWPGn7wlma-0)
+* [OusamaNetlfy](https://main--rickandmortyonlineformapro.netlify.app)
