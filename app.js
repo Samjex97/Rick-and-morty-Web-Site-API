@@ -113,9 +113,11 @@ function showModale(character) {
     var episodeElement = modale.querySelector('.episode');
     var imageContainer2 = document.querySelector(".containerImageModale");
 
-    if (character && character.image) { 
+    if (character && character.image && character.episode && character.episode.length > 0) { 
+        // Estrai il numero dell'episodio dall'URL
+        var episodeNumber = character.episode[0].split('/').pop();
         locationElement.textContent = character.location.name;
-        episodeElement.textContent = character.episode[0];
+        episodeElement.textContent =  episodeNumber; // Aggiungi "Episode: " prima del numero
         imageContainer2.style.backgroundImage = `url('${character.image}')`;
         modale.style.display = 'block';
     }

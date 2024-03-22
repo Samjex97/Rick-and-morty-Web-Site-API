@@ -71,14 +71,14 @@ position: relative;
 }
 
 .Buttons{
-font-size: 30px;
+font-size: 50px;
 padding: 0 60px 0 ;
 border: 3px solid #B2DF28;
-border-radius: 30px;
+border-radius: 50px;
 background-color: transparent;
 color: #00B5CC;
 font-weight: bold;
-font-family: "Get Schwifty Regular"; 
+font-family: "Creepster", system-ui;
 letter-spacing: 5px;
 margin: 20px;
 cursor: pointer;
@@ -96,7 +96,20 @@ text-shadow:
 
 .Buttons:hover{
     background-color: #B2DF28;
-    transform: scale(1.1);
+    
+    color: #24325F;
+    border: 3px solid #24325F;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         3px  2px 0 #000;
+         -webkit-text-stroke: 0.5px white;
+
+
+         transform: scale(1.1);
+         will-change: transform
+
 }
 
 .Articolo h2 {
@@ -285,6 +298,7 @@ text-shadow:
          3px  2px 0 #000;
          letter-spacing: 3px;
          font-size: 25px;
+         font-family: "Creepster", system-ui;
 }
 
 
