@@ -7,8 +7,8 @@
 body {
 background-color:#24325F ;
 min-height: 100vh;
-font-family:"Creepster", system-ui; 
-
+font-family: "Get Schwifty Regular";
+overflow-x: hidden;
 }
 
 header {
@@ -26,10 +26,10 @@ header {
 }
 
 .navbar a {
-color: white;
+color: #B2DF28;
 text-decoration: none;
 font-weight: bold;
-font-family:"Creepster", system-ui; 
+font-family: "Get Schwifty Regular"; 
 font-size: 30px;
 letter-spacing: 2px;
 }
@@ -41,6 +41,11 @@ letter-spacing: 2px;
     left: 20%; 
     transform: translateX(-50%); 
     z-index: 200; 
+}
+
+#myAudio {
+    margin-left: 40px;
+    margin-top: 5px;
 }
 
 /* Main Section */ 
@@ -73,7 +78,7 @@ border-radius: 30px;
 background-color: transparent;
 color: #00B5CC;
 font-weight: bold;
-font-family:"Creepster", system-ui; 
+font-family: "Get Schwifty Regular"; 
 letter-spacing: 5px;
 margin: 20px;
 cursor: pointer;
@@ -96,15 +101,16 @@ text-shadow:
 
 .Articolo h2 {
 font-size: 8rem;
+margin-top: 20px;
 position: relative;
-left: 30px;
+left: 60px;
 color:#00B5CC ;
 text-shadow: 
         -1px -1px 0 #000,  
          1px -1px 0 #000,
         -1px  1px 0 #000,
          3px  4px 0 #000;
-         -webkit-text-stroke: 1px #B2DF28;
+         -webkit-text-stroke: 0.5px #B2DF28;
 }
 /* Main Content */
 .content {
@@ -118,8 +124,8 @@ text-shadow:
 .content p {
     width: 70%;
     margin: 4rem;
-    font-size: 25px;
-
+    font-size: 30px;
+    font-family: "Creepster", system-ui;
 }
 /*Section 1 */ 
 
@@ -134,7 +140,7 @@ text-shadow:
 
 .Section2 {
     background-color: rgba(0, 131, 143, 0.5);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 19% 100%);
     position: relative;
     
 }
@@ -145,16 +151,6 @@ text-shadow:
     height: 45rem;
     
 }
-
-.move-right {
-    animation: moveRight 5s linear infinite alternate; }
-
-    @keyframes moveRight {
-        0% { left: 0; }
-        100% { left: calc(100% - 50rem); }
-    }
-
-
     
 /* Section 3 */ 
 
@@ -162,7 +158,30 @@ text-shadow:
 width: 100%;
 height: 30rem;
 }
+ h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+    position: relative;
+    color:#00B5CC ;
+    text-shadow: 
+            -1px -1px 0 #000,  
+             1px -1px 0 #000,
+            -1px  1px 0 #000,
+             3px  4px 0 #000;
+             -webkit-text-stroke: 1px #B2DF28;
+             margin-top: 30px;
+             transition: 0.5s;
+            animation: zoomInAndOut 2s infinite alternate;
+        }
 
+        @keyframes zoomInAndOut {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    
+    
 
 .Section3 h1 {
 display: flex;
@@ -181,7 +200,7 @@ text-shadow:
 
 .CardSelector {
     display: flex;
-    height: 100%;
+    height: 40rem;
     width: 100%;
     margin-top: 30px;
     justify-content: center;
@@ -199,9 +218,6 @@ text-shadow:
         transition: opacity 1s ease;
     }
 
-.Card:hover{
-    transform: scale(1.1);
-}
 
 .Card{
     display: flex;
@@ -210,22 +226,40 @@ text-shadow:
     border: 1px solid #B2DF28;
     border-radius: 20px;
     height: 100%;
-    width: 50%;
+    width: 30rem;
     margin-right: 60px;
     margin-left: 60px;
-    flex-direction: column; /* Imposta il layout dei figli in colonna */
-    justify-content: flex-end; /* Allinea i figli in basso */
+    flex-direction: column;
+    justify-content: flex-end; 
     align-items: flex-start;
     transition: 0.5s;
     cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    
 }
+.Card:hover{
+    
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px  rgb(233, 248, 189);
+}
+.card:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);}
 
 .containerImage {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 95%;
-    height: 65%;
+    width: 28.5rem;
+    height: 60%;
     border-radius: 20px;
     margin-left: 11px;
     margin-top: 12px;
@@ -234,7 +268,8 @@ text-shadow:
 
 .CarteStatus {
  background-color: #00B5CC;
- width: 96%;
+ width: 28.5rem;
+ height: 34%;
  margin: 10px;
  border-radius: 20px;
 }
@@ -269,7 +304,7 @@ text-shadow:
   
   .modale-contenuto {
     
-    background-color: #00B5CC;
+    background-color: #00b4cc9a;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -283,9 +318,8 @@ text-shadow:
     display: flex;
     justify-content: center;
     color: #00B5CC;
-    font-size: 4rem;
-
-  color:#00B5CC ;
+    font-size: 5rem;
+    font-family: "Creepster", system-ui;
    text-shadow: 
         -1px -1px 0 #000,  
          1px -1px 0 #000,
@@ -297,27 +331,451 @@ text-shadow:
   .modale-contenuto p{
     display: flex;
     justify-content: center;
-    color: #00B5CC;
-    color:#00B5CC ;
+    color: #B2DF28;
+    font-family: "Creepster", system-ui;
    text-shadow: 
         -1px -1px 0 #000,  
          1px -1px 0 #000,
         -1px  1px 0 #000,
          3px  4px 0 #000;
          -webkit-text-stroke: 1px #B2DF28;
-         font-size: 2rem;
+         font-size: 4rem;
   }
   .chiudi {
-    color: black;
+    color: #B2DF28;
     float: right;
-    font-size: 50px;
+    font-size: 90px;
     font-weight: bold;
   }
   
   .chiudi:hover,
   .chiudi:focus {
-    color: black;
+    color: red;
     text-decoration: none;
     cursor: pointer;
   }
+
   
+  .FormContainer {
+  
+  display: flex;} 
+
+
+  .FormContainer img {
+
+height: 450px;
+
+  }
+
+
+  /* Resoponsive ---------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
+
+  
+  @media screen and (min-width: 768px) and (max-width: 1223px) {
+  
+    header {
+        height: 80px;
+        padding: 20px 100px;
+    }
+    
+    .navbar a {
+        position: absolute;
+        right: 200px;
+        top: 25px;
+    
+    }
+    
+    .Logo1 {
+        height: 150px;
+        top: -3px;
+    }
+
+
+    /* Main Section RESPONSIVE FOR DESKTOP  */ 
+    section {
+        margin-top: 7rem;
+    }
+    
+    
+    .ButtonSection {
+    
+    margin-left: 15px;
+  
+    }
+
+    /*  RESPONSIVE FOR DESKTOP  */ 
+    /* Img of Portal Pistol */ 
+    
+    .PortalPistol {
+        margin: 0 20px 0 0 ;
+    }
+    
+    .Buttons{
+    padding: 0 50px 0 ;
+    }
+    
+ 
+    .Articolo h2 {
+    font-size: 3rem; 
+    margin-top: 50px;
+
+   
+    }
+    /*  RESPONSIVE FOR DESKTOP  */ 
+    /* Main Content */
+   
+    .content p {
+
+        margin: 2rem  3rem;
+        font-size: 12px;
+    
+    }
+/*  RESPONSIVE FOR DESKTOP  */ 
+    /*Section 2 */
+    
+    .RickPortal {
+        width: 30rem;
+        height: 25rem;
+        
+    }
+
+    .Section2 {
+        background-color: rgba(0, 131, 143, 0.5);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 13% 100%);
+
+        position: relative;
+        
+    }
+    /*  RESPONSIVE FOR DESKTOP  */ 
+/* Section 3 */ 
+
+.Section3 {
+    width: 100%;
+    height: 30rem;
+    }
+     h1 {
+
+        font-size: 3rem;}
+     /*  RESPONSIVE FOR DESKTOP  */
+
+/* CARD RESPONSIVE DESKTOP */
+
+  .CardSelector {
+    height: 30rem;
+    width: 100%;
+}
+
+.Card{
+    height: 100%;
+    width: 15rem;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.containerImage {
+    width: 13.5rem;
+}
+.CarteStatus {
+ width: 13.5rem;
+}
+.Card h2, p {
+    margin-bottom: 15px;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+  .modale-contenuto h2{
+    display: flex;
+    justify-content: center;
+    color: #00B5CC;
+    font-size: 5rem;
+    font-family: "Creepster", system-ui;
+   text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         3px  4px 0 #000;
+         -webkit-text-stroke: 1px #B2DF28;
+  }
+
+  .modale-contenuto p{
+    
+         font-size: 2rem;
+  }
+
+}
+/* TABLET SCEEEN ------------------------------------------------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width: 425px) and (max-width: 767px) {
+    header {
+        height: 150px;
+        padding: 20px 100px;
+    }
+    
+    .navbar a {
+        
+        display: none;
+    
+    }
+    
+    .Logo1 {
+        position: absolute;
+        height: 300px;
+        left: 600px;
+    }
+
+    /* Main Section RESPONSIVE FOR TABLET  */ 
+    section {
+        margin-top: 20rem;
+    }
+    
+    .ButtonSection{
+        margin-right: 60px;
+        margin-left: 0;
+    }
+
+    /*  RESPONSIVE FOR TABLET  */ 
+    /* Img of Portal Pistol */ 
+    
+    .PortalPistol {
+    
+    margin: 0 0 0 40px;
+    }
+    
+    .Buttons{
+    padding: 0 50px 0  ;
+    margin: 0 0 20px 0;
+    }
+
+    .content {
+        margin: 0;
+        display: inline;
+    }
+    .Section1 {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 74% 90%, 50% 75%, 0% 75%);
+        height: 80rem
+    }
+ 
+    .Articolo h2 {
+    font-size: 7rem; 
+    margin-top: 50px;
+    justify-content: center;
+    display: flex;
+
+   
+    }
+    /*  RESPONSIVE FOR TABLET  */ 
+    /* Main Content */
+   
+    .content p {
+        justify-content: center;
+        display: flex;
+        width: 95%;
+        font-size: 40px;
+    
+    }
+/*  RESPONSIVE FOR TABLET  */ 
+    /*Section 2 */
+    
+    .RickPortal {
+        width: 30rem;
+        height: 25rem;
+        
+    }
+#myAudio {
+    display: none;
+}
+    .Section2 {
+        display: none;
+        
+    }
+    /*  RESPONSIVE FOR TABLET  */ 
+/* Section 3 */ 
+
+.Section3 {
+    width: 100%;
+    height: 30rem;
+    }
+     h1 {
+
+        font-size: 3rem;}
+     
+
+/* CARD RESPONSIVE TABLET */
+
+  .CardSelector {
+    height: 30rem;
+    width: 100%;
+}
+
+.Card{
+    height: 100%;
+    width: 15rem;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.containerImage {
+    width: 13.5rem;
+}
+.CarteStatus {
+ width: 13.5rem;
+}
+.Card h2, p {
+    margin-bottom: 15px;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.modale-contenuto p{
+    
+    font-size: 2rem;
+}
+
+}
+
+
+
+/* Phone SCEEEN ------------------------------------------------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    header {
+        height: 320px;
+        padding: 20px 100px;
+    }
+    
+    .navbar a {
+        
+        display: none;
+    
+    }
+    
+    .Logo1 {
+        position: absolute;
+        height: 600px;
+        left: 650px;
+    }
+
+    /* Main Section RESPONSIVE FOR PHONE  */ 
+    section {
+        margin-top: 28rem;
+    }
+    
+    .ButtonSection{
+        margin-right: 0px;
+        margin-left: 60px;
+        padding: 100px 0 ;
+        display: block;
+    }
+
+    /*  RESPONSIVE FOR PHONE */ 
+    /* Img of Portal Pistol */ 
+    
+    .PortalPistol {
+    height: 20rem;
+    width: 20rem;
+    margin: 0 0 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 85rem;
+    left: 42rem;
+    z-index: 100000;
+    }
+    
+    .Buttons{
+    padding: 0 50px 0  ;
+    margin: 0 0 20px 5px;
+    font-size: 60px;
+    }
+
+    .content {
+        margin: 0;
+        display: inline;
+    }
+    .Section1 {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 74% 90%, 50% 75%, 0% 75%);
+        height: 80rem
+    }
+ 
+    .Articolo h2 {
+    font-size: 7rem; 
+    margin-top: 50px;
+    justify-content: center;
+    display: flex;
+   
+    }
+
+    .MoveButton {
+        position: absolute;
+        left: 17rem;
+        top: 150rem;
+        width: 100vh;
+      font-size: 5rem;
+    }
+    /*  RESPONSIVE FOR PHONE  */ 
+    /* Main Content */
+   
+    .content p {
+        justify-content: center;
+        display: flex;
+        width: 95%;
+        font-size: 40px;
+    
+    }
+/*  RESPONSIVE FOR PHONE  */ 
+    /*Section 2 */
+    
+    .RickPortal {
+        width: 30rem;
+        height: 25rem;
+        
+    }
+#myAudio {
+    display: none;
+}
+    .Section2 {
+        display: none;
+        
+    }
+    /*  RESPONSIVE FOR PHONE  */ 
+/* Section 3 */ 
+
+.Section3 {
+    width: 100%;
+    height: 30rem;
+    }
+     h1 {
+
+        font-size: 3rem;}
+     /*  RESPONSIVE FOR PHONE  */
+
+/* CARD RESPONSIVE PHONE */
+
+  .CardSelector {
+    height: 30rem;
+    width: 100%;
+}
+
+.Card{
+    height: 100%;
+    width: 15rem;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.containerImage {
+    width: 13.5rem;
+}
+.CarteStatus {
+ width: 13.5rem;
+}
+.Card h2, p {
+    margin-bottom: 15px;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.modale-contenuto p{
+    
+    font-size: 2rem;
+}
+
+}
+

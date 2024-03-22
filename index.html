@@ -13,42 +13,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/get_schwifty.ttf">
+
+<link href="https://db.onlinewebfonts.com/c/485fe91395665a0ac50e25744ff3a19c?family=Get+Schwifty+Regular" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 
     <!-- This is the head of my code  -->
-    <header class="header">
-      <a href="#"><img class="Logo1" src="/Photo/Logo1.png" alt=""></a>
-
-     <nav class="navbar">
-        <a href="#">Official WebSite</a>
+<header class="header">
+          <a href="#"><img class="Logo1" src="/Photo/Logo1.png" alt=""></a>
+      
+<nav class="navbar">
+        <a href="#">Onlineformapro</a>
         
-     </nav>
-    </header>
+</nav>
+</header>
 
 
 <!-- This is the middle part of my code -->
 <section>
 <main>
-<div class="ButtonSection">
+            <div class="ButtonSection">
     
-    <img class =" PortalPistol" src="/Photo/PortalPistol.png" alt="It's a rick's portal pistol image">
+            <img class =" PortalPistol" src="/Photo/tap tap.gif" alt="It's a rick's portal pistol image">
     
-    <button class="Buttons">All</button>
-    <button class="Buttons">Alive</button>
-    <button class="Buttons">Dead</button>
-    <button class="Buttons">Unknown</button>
+            <button class="Buttons" data-status="all">All</button>
+            <button  class="Buttons" data-status="alive" >Alive</button>
+            <button class="Buttons" data-status="dead" >Dead</button>
+            <button class="Buttons" data-status="unknown">Unknown</button>
 
-</div>
+            </div>
             <div class="content">
-                <div class="Section1">
+            <div class="Section1">
 <article class="Articolo">
                 
-                     <h2>Rick And Morty</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel leo ligula. Vivamus consequat posuere tortor sed tincidunt. Aliquam tempus, eros dapibus laoreet eleifend, turpis nunc tempor nibh, non pellentesque metus velit ut dui. In pellentesque mi a ipsum fermentum, in tristique ante rutrum. Fusce ac volutpat velit. Phasellus lacinia eget eros in scelerisque. Curabitur molestie ante a sem fermentum imperdiet. Quisque eget mattis leo, eget congue nulla. Pellentesque porttitor venenatis turpis, non rhoncus augue egestas id. Quisque tincidunt nisi et lorem viverra, non lobortis metus luctus. Aenean fermentum iaculis nisl eget suscipit.</p>
+            <h2>Rick And Morty</h2>
+                     
+            <p>
+                 "Rick and Morty" is an American animated science fiction sitcom created by Justin Roiland and Dan Harmon. The series follows the misadventures of an eccentric and alcoholic scientist named Rick Sanchez and his good-hearted but easily influenced grandson Morty Smith. Together, they embark on various interdimensional and intergalactic adventures, encountering bizarre and often dangerous beings along the way. The show is known for its dark humor, surreal storytelling, and exploration of complex themes such as existentialism, morality, and the nature of the universe. "Rick and Morty" has gained a cult following and critical acclaim for its clever writing, imaginative concepts, and unique blend of comedy and science fiction.
+            <audio id="myAudio" controls autoplay>
+            <source src="/SONG/Rick and Morty Official Soundtrack  Live Forever - Kotomi & Ryan Elder  Rick and Morty.mp3" type="audio/mpeg">
+                            
+            </audio></p>
+                        
 </article>
-                </div>
+            </div>
 
 
 <aside  class="Section2">
@@ -61,23 +69,26 @@
 
             </div>
     
-
+            <h1 class="MoveButton">Press any button to see differents cards</h1>
     
-<div class="Section3">
-    <!-- MODALE -->
-<div id="modale" class="modale">
-    <div class="modale-contenuto">
-      <span class="chiudi" onclick="closeModale()">&times;</span>
-      <h2>Informazioni aggiuntive</h2>
-      <p>Questo è il testo delle informazioni aggiuntive che desideri mostrare nella modale. Puoi inserire qui qualsiasi contenuto aggiuntivo desideri visualizzare.</p>
-    </div>
-  </div>
+            <div class="Section3" style="display: none;">
+    <!-- start MODALE -->
+            <div id="modale" class="modale">
+            <div class="modale-contenuto">
+            <span class="chiudi" onclick="closeModale()">&times;</span>
+            <h2>Other INFO</h2>
+            <div class="additional-info">
+            <p><strong>Location: </strong>  <span class="location"></span></p>
+            <p><strong>Episode: </strong>  <span class="episode"></span></p> 
+            </div>
+            </div>
+            </div>
 
 <!-- end MODALE -->
 
-    <h1 class="Section3H1">Card</h1>
-    <div class="CardSelector">
-        <div class="Card" onclick="showModale()">
+            <h1 class="Section3H1" style="display: none;">Card</h1>
+            <div class="CardSelector">
+            <div class="Card" style="display: none;" onclick="showModale()">
             <div class="containerImage"></div>
                  <div class="CarteStatus">
                 <h2 class="status">Status:</h2>
@@ -85,9 +96,9 @@
                 <p class="Race">Race: </p>
                 <p class="Gender">Gender:</p>
             
-        </div>
-        </div>
-        <div class="Card" onclick="showModale()">
+            </div>
+            </div>
+            <div class="Card" style="display: none;" onclick="showModale()">
             <div class="containerImage"></div>
             <div class="CarteStatus">
            <h2 class="status">Status:</h2>
@@ -95,8 +106,8 @@
            <p class="Race">Race</p>
            <p class="Gender">Male/female</p>
             </div>
-        </div>
-        <div class="Card" onclick="showModale()">
+            </div>
+            <div class="Card" style="display: none;" onclick="showModale()">
             <div class="containerImage"></div>
             <div class="CarteStatus">
            <h2 class="status">Status:</h2>
@@ -104,12 +115,21 @@
            <p class="Race">Race</p>
            <p class="Gender">Male/female</p>
             </div>
-        </div>
+            </div>
+            <div class="Card" style="display: none;" onclick="showModale()">
+            <div class="containerImage"></div>
+                 <div class="CarteStatus">
+                <h2 class="status">Status:</h2>
+                <p class="name">Name:</p>
+                <p class="Race">Race: </p>
+                <p class="Gender">Gender:</p>
+            
+            </div>
+            </div>
         
-        
-    </div>
-    <div class="CardSelector">
-        <div class="Card" onclick="showModale()">
+            </div>
+            <div class="CardSelector">
+            <div class="Card" style="display: none;" onclick="showModale()">
             <div class="containerImage"></div>
             <div class="CarteStatus">
            <h2 class="status">Status:</h2>
@@ -117,8 +137,8 @@
            <p class="Race">Race</p>
            <p class="Gender">Male/female</p>
             </div>
-        </div>
-        <div class="Card" onclick="showModale()">
+            </div>
+            <div class="Card" style="display: none;" onclick="showModale()">
             <div class="containerImage"></div>
                  <div class="CarteStatus">
                 <h2 class="status">Status:</h2>
@@ -126,19 +146,32 @@
                 <p class="Race">Race</p>
                 <p class="Gender">Male/female</p>
             </div>
-        </div>
-        <div class="Card" onclick="showModale()">
+            </div>
+            <div class="Card" style="display: none;" onclick="showModale()">
             <div class="containerImage"></div>
             <div class="CarteStatus">
            <h2 class="status">Status:</h2>
            <p class="name">Name:</p>
            <p class="Race">Race</p>
-           <p class="Gender">Male/female</p>
+            <p class="Gender">Male/female</p>
+             </div>
+             </div>
+             <div class="Card" style="display: none;" onclick="showModale()">
+             <div class="containerImage"></div>
+                 <div class="CarteStatus">
+                <h2 class="status">Status:</h2>
+                <p class="name">Name:</p>
+                <p class="Race">Race: </p>
+                <p class="Gender">Gender:</p>
+            
             </div>
-        </div>
-        </div>
-        <div class="CardSelector">
-            <div class="Card" onclick="showModale()">
+            </div>
+            </div>
+        
+
+        
+            <div class="CardSelector">
+            <div class="Card" style="display: none;" onclick="showModale()">
                 <div class="containerImage"></div>
                 <div class="CarteStatus">
                <h2 class="status">Status:</h2>
@@ -149,7 +182,7 @@
     
                 </div>
             </div>
-            <div class="Card" onclick="showModale()">
+            <div class="Card" style="display: none;" onclick="showModale()">
                 <div class="containerImage"></div>
                  <div class="CarteStatus">
                 <h2 class="status">Status:</h2>
@@ -158,7 +191,7 @@
                 <p class="Gender">Male/female</p>
                 </div>
             </div>
-            <div class="Card" onclick="showModale()">
+            <div class="Card" style="display: none;" onclick="showModale()">
                 <div class="containerImage"></div>
                  <div class="CarteStatus">
                 <h2 class="status">Status:</h2>
@@ -167,14 +200,25 @@
                 <p class="Gender">Male/female</p>
                 </div>
             </div>
-</div>
+            <div class="Card" style="display: none;" onclick="showModale()">
+                <div class="containerImage"></div>
+                     <div class="CarteStatus">
+                    <h2 class="status">Status:</h2>
+                    <p class="name">Name:</p>
+                    <p class="Race">Race: </p>
+                    <p class="Gender">Gender:</p>
+                
+            </div>
+            </div>
+            </div>
 
     
     </section>
+    
 </main>
 <!-- This is the last part of my code  -->
     <footer>
-
+      <!-- THERE IS NO FOOTER IN THIS WEBSITE -->
 
     </footer>
     <script src="app.js"></script>
