@@ -107,25 +107,27 @@ function showCards() {
     });
 }
 
-// Show Modale
 function showModale(character) {
     var modale = document.getElementById('modale');
     var locationElement = modale.querySelector('.location');
     var episodeElement = modale.querySelector('.episode');
+    var imageContainer2 = document.querySelector(".containerImageModale");
 
-    // Info of the char
-    locationElement.textContent = character.location.name;
-    episodeElement.textContent = character.episode[0];
-
-    modale.style.display = 'block';
+    if (character && character.image) { 
+        locationElement.textContent = character.location.name;
+        episodeElement.textContent = character.episode[0];
+        imageContainer2.style.backgroundImage = `url('${character.image}')`;
+        modale.style.display = 'block';
+    }
 }
+
 
 // Close Modale
 function closeModale() {
     var modale = document.getElementById('modale');
     var locationElement = modale.querySelector('.location');
     var episodeElement = modale.querySelector('.episode');
-
+    
     
     locationElement.textContent = '';
     episodeElement.textContent = '';
