@@ -187,8 +187,8 @@ height: 30rem;
              transition: 0.5s;
             animation: zoomInAndOut 2s infinite alternate;
         }
-
-        @keyframes zoomInAndOut {
+  /* effet for the word that zoom in and out  */
+        @keyframes zoomInAndOut {      
             0% { transform: scale(1); }
             50% { transform: scale(1.2); }
             100% { transform: scale(1); }
@@ -393,7 +393,7 @@ height: 450px;
   }
 
 
-  /* Resoponsive ---------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
+  /* Responsive ---------------------------------------------------------------------------------------------------------------------------------------------------------- */ 
 
   
   @media screen and (min-width: 768px) and (max-width: 1223px) {
